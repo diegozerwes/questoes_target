@@ -1,0 +1,42 @@
+package teste_target;
+
+import java.util.Scanner;
+
+public class program_string {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int num1 = 0, num2 = 1, num3 = 0;
+		boolean igual = false;
+				
+		System.out.println("Digite um número inteiro:");
+		int entrada = sc.nextInt();
+	
+		
+			
+		while (!igual && num3 <= entrada) {
+			num3 = num1 + num2;
+			num1 = num2;
+			num2 = num3;
+			
+			if (num3 == entrada) {
+				igual = true;
+			}
+		}
+		
+		
+		if (igual) {
+			System.out.printf("%d pertence à sequência Fibonnaci", entrada);
+			}
+		else {
+			System.out.printf("%d não pertence à sequência Fibonnaci", entrada);
+		}
+			
+			
+			
+		sc.close();
+	}
+
+}
